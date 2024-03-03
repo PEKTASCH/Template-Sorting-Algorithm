@@ -55,3 +55,32 @@ class Array{
     }
 };
 
+int main(){
+
+    int int_size, float_size;                     // 2 tane değeri tanımlıyorum daha sonra boyut istiyorum
+    cout << "Enter array size of integer array:" << endl;
+    cin >> int_size;
+    cout << "Enter array size of floating array:" << endl;
+    cin >> float_size;
+
+    Array <int> int_array(int_size);              // Bunları aldıktan sonra template çağırıyorum
+    Array <float> float_array(float_size);
+
+    cout << "Enter Integer array:" << endl;
+    int_array.read_elements();
+    cout << "Enter Floating array:" << endl;
+    float_array.read_elements();
+    cout << "Before sorting they are:" << endl;
+
+    int_array.display();
+    float_array.display();
+
+    int_array.sort();
+    float_array.sort();
+
+    cout << "After sorting they are:" << endl;
+    int_array.display();
+    float_array.display();
+
+    return 0;
+}
